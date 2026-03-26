@@ -87,6 +87,17 @@
             transition: all 0.3s ease;
         }
         
+        /* Typing animation */
+        .typing-text {
+            border-right: 3px solid var(--accent-blue);
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: var(--accent-blue); }
+            51%, 100% { border-color: transparent; }
+        }
+        
         /* Scroll reveal animations */
         .reveal {
             opacity: 0;
@@ -142,19 +153,17 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <svg class="theme-toggle-icon" id="theme-icon" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
         </svg>
     </button>
 
-    <!-- Sticky Navigation Bar -->
-    <nav class="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 shadow-lg">
+        <nav class="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-2">
+                    <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-2">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                         </svg>
@@ -180,7 +189,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="py-20 px-4 sm:px-6 lg:px-8 reveal-scale">
         <div class="max-w-4xl mx-auto text-center">
             <div class="mb-8">
@@ -197,11 +205,10 @@
                 </svg>
                 <span>San Francisco, CA</span>
             </div>
-            <p class="text-lg text-gray-300 italic">"Building robust solutions with clean code and innovative thinking"</p>
+            <p class="text-lg text-gray-300 italic typing-text" id="typing-text"></p>
         </div>
     </section>
 
-    <!-- Biography Section -->
     <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 reveal">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-white mb-8 text-center reveal">About Me</h2>
@@ -245,12 +252,10 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8 reveal">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-8 sm:mb-12 reveal">Skills & Expertise</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-                <!-- Frontend -->
                 <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl reveal-right stagger-1">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -298,7 +303,6 @@
                     </div>
                 </div>
 
-                <!-- Backend -->
                 <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl reveal-right stagger-2">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-green-400 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -346,7 +350,6 @@
                     </div>
                 </div>
 
-                <!-- Tools & DevOps -->
                 <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl reveal-right stagger-3">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-purple-400 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -698,6 +701,24 @@
     </footer>
 
     <script>
+        // Typing animation
+        const typingText = document.getElementById('typing-text');
+        const text = '"Building robust solutions with clean code and innovative thinking"';
+        let index = 0;
+        
+        function typeText() {
+            if (index < text.length) {
+                typingText.textContent = text.substring(0, index + 1);
+                index++;
+                setTimeout(typeText, 50);
+            }
+        }
+        
+        // Start typing animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(typeText, 1000);
+        });
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');

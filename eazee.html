@@ -9,6 +9,59 @@
         html {
             scroll-behavior: smooth;
         }
+        
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Stagger animations */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen">
@@ -44,7 +97,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 reveal-scale">
         <div class="max-w-4xl mx-auto text-center">
             <div class="mb-8">
                 <div class="w-32 h-32 mx-auto bg-gray-700 rounded-full flex items-center justify-center">
@@ -65,11 +118,11 @@
     </section>
 
     <!-- Biography Section -->
-    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800 reveal">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">About Me</h2>
+            <h2 class="text-3xl font-bold text-white mb-8 text-center reveal">About Me</h2>
             <div class="space-y-6 text-gray-300">
-                <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg reveal-left stagger-1">
                     <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
                         <svg class="w-6 h-6 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -81,7 +134,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg reveal-left stagger-2">
                     <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
                         <svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
@@ -93,7 +146,7 @@
                     </p>
                 </div>
                 
-                <div class="bg-gray-900 rounded-lg p-6 shadow-lg">
+                <div class="bg-gray-900 rounded-lg p-6 shadow-lg reveal-left stagger-3">
                     <h3 class="text-xl font-semibold text-white mb-3 flex items-center">
                         <svg class="w-6 h-6 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
@@ -109,12 +162,12 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
+    <section id="skills" class="py-8 px-4 sm:py-12 sm:px-6 lg:py-16 lg:px-8 reveal">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-8 sm:mb-12">Skills & Expertise</h2>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-white mb-8 sm:mb-12 reveal">Skills & Expertise</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 <!-- Frontend -->
-                <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl">
+                <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl reveal-right stagger-1">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -162,7 +215,7 @@
                 </div>
 
                 <!-- Backend -->
-                <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl">
+                <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl reveal-right stagger-2">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-green-400 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
@@ -210,7 +263,7 @@
                 </div>
 
                 <!-- Tools & DevOps -->
-                <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl">
+                <div class="bg-gray-800 rounded-lg p-4 sm:p-6 shadow-xl reveal-right stagger-3">
                     <div class="flex items-center mb-4 sm:mb-6">
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-purple-400 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
@@ -559,5 +612,71 @@
             <p class="text-gray-400">© 2024 Dev Eazee. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Scroll reveal animation
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Initial reveal on page load
+        window.addEventListener('load', () => {
+            setTimeout(reveal, 100);
+        });
+
+        // Reveal on scroll
+        window.addEventListener('scroll', reveal);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact form handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const message = this.querySelector('textarea').value;
+            
+            // Simple validation
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Create mailto link
+            const subject = encodeURIComponent('Contact from Portfolio');
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const mailtoLink = `mailto:israelite1804@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
 </body>
 </html>

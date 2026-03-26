@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+body { 
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+h1, h2, h3, h4 { 
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+}
+
+.hero-gradient { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+}
+
+.card-hover { 
+    transition: all 0.3s ease; 
+}
+
+.card-hover:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+}
+
+.skill-bar { 
+    transition: width 1s ease-in-out; 
+}
+
+.fade-in { 
+    animation: fadeIn 0.8s ease-in; 
+}
+
+@keyframes fadeIn { 
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+}

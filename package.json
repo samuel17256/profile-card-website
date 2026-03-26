@@ -2,5 +2,23 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",
     "tailwindcss": "^4.2.2"
-  }
+  },
+  "name": "profile-card-website",
+  "description": "A responsive team profile card website showcasing team members with elegant hover effects and social media links.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuel17256/profile-card-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuel17256/profile-card-website/issues"
+  },
+  "homepage": "https://github.com/samuel17256/profile-card-website#readme"
 }

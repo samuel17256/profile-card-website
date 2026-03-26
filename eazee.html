@@ -98,6 +98,16 @@
             51%, 100% { border-color: transparent; }
         }
         
+        /* Skills progress bar animation */
+        .skill-progress {
+            width: 0%;
+            transition: width 2s ease-out;
+        }
+        
+        .skill-progress.animated {
+            width: var(--skill-width);
+        }
+        
         /* Scroll reveal animations */
         .reveal {
             opacity: 0;
@@ -270,7 +280,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">95%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full" style="width: 95%"></div>
+                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 95%"></div>
                             </div>
                         </div>
                         <div>
@@ -279,7 +289,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">90%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full" style="width: 90%"></div>
+                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 90%"></div>
                             </div>
                         </div>
                         <div>
@@ -288,7 +298,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">88%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full" style="width: 88%"></div>
+                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 88%"></div>
                             </div>
                         </div>
                         <div>
@@ -297,7 +307,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">85%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full" style="width: 85%"></div>
+                                <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 85%"></div>
                             </div>
                         </div>
                     </div>
@@ -317,7 +327,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">92%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full" style="width: 92%"></div>
+                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 92%"></div>
                             </div>
                         </div>
                         <div>
@@ -326,7 +336,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">88%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full" style="width: 88%"></div>
+                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 88%"></div>
                             </div>
                         </div>
                         <div>
@@ -335,7 +345,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">85%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full" style="width: 85%"></div>
+                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 85%"></div>
                             </div>
                         </div>
                         <div>
@@ -344,7 +354,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">80%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full" style="width: 80%"></div>
+                                <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -365,7 +375,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">95%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full" style="width: 95%"></div>
+                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 95%"></div>
                             </div>
                         </div>
                         <div>
@@ -374,7 +384,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">85%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full" style="width: 85%"></div>
+                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 85%"></div>
                             </div>
                         </div>
                         <div>
@@ -383,7 +393,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">78%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full" style="width: 78%"></div>
+                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 78%"></div>
                             </div>
                         </div>
                         <div>
@@ -392,7 +402,7 @@
                                 <span class="text-gray-400 text-xs sm:text-sm">82%</span>
                             </div>
                             <div class="w-full bg-gray-700 rounded-full h-2 sm:h-3">
-                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full" style="width: 82%"></div>
+                                <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 sm:h-3 rounded-full skill-progress" style="--skill-width: 82%"></div>
                             </div>
                         </div>
                     </div>
@@ -719,6 +729,20 @@
             setTimeout(typeText, 1000);
         });
 
+        // Skills progress bar animation
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            skillBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                if (rect.top < windowHeight && rect.bottom > 0 && !bar.classList.contains('animated')) {
+                    bar.classList.add('animated');
+                }
+            });
+        }
+
         // Theme toggle functionality
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
@@ -763,13 +787,20 @@
             });
         }
 
-        // Initial reveal on page load
+        // Combined scroll event handler
+        function handleScroll() {
+            reveal();
+            animateSkills();
+        }
+
+        // Initial reveal and skills check on page load
         window.addEventListener('load', () => {
             setTimeout(reveal, 100);
+            setTimeout(animateSkills, 100);
         });
 
-        // Reveal on scroll
-        window.addEventListener('scroll', reveal);
+        // Reveal and animate skills on scroll
+        window.addEventListener('scroll', handleScroll);
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

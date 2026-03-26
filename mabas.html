@@ -8,18 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 
 <body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Back Arrow -->
+                <a href="index.html" class="flex items-center gap-2 text-gray-600 hover:text-gray-700 transition">
+                    <i class="fa-solid fa-left-long"></i>
+                    <span class="hidden sm:inline"> Back</span>
+                </a>
+
+                <!-- Name -->
+                <h1 class="text-lg sm:text-xl font-semibold text-gray-800">Dev Mabas</h1>
+
+                <!-- Placeholder for spacing -->
+                <div class="w-10"></div>
+            </div>
+        </div>
+    </nav>
 
     <div class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
         <!-- Profile Card -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
 
             <!-- Header -->
-            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 h-40">
-                <h1></h1>
-            </div>
+            <div class="bg-[#042040] h-40"> </div>
 
             <!-- Profile Info -->
             <div class="p-6">
@@ -58,11 +75,10 @@
 
                 <!-- Buttons -->
                 <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                    <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                        Follow
-                    </button>
-                    <button class="border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-100 transition">
-                        Message
+                    <button
+                        class=" flex gap-3 items-center justify-center bg-[#042040] text-white border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-100 hover:text-black transition">
+                        <span class="text-green-500 text-2xl font-black">.</span>
+                        <p>Available for hire</p>
                     </button>
                 </div>
 
@@ -70,9 +86,18 @@
 
                 <div class="text-center">
                     <div class="mt-6 flex flex-wrap gap-4 justify-center  md:justify-start text-sm">
-                        <a href="#" class="text-blue-600 hover:underline">GitHub</a>
-                        <a href="#" class="text-blue-600 hover:underline">LinkedIn</a>
-                        <a href="#" class="text-blue-600 hover:underline">Twitter</a>
+                        <a href="https://github.com/JohnMabas"
+                            class="bg-[#042040] text-white border p-2 font-bold rounded-full"> <i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/john-mabas-4366aa22a/"
+                            class="bg-[#042040] text-white border p-2 font-bold rounded-full"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://x.com/Mabas_Akila"
+                            class="bg-[#042040] text-white border p-2 font-bold rounded-full"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://x.com/Mabas_Akila"
+                            class="bg-[#042040] text-white border p-2 font-bold rounded-full"><i
+                                class="fa-regular fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -100,12 +125,17 @@
             <div class="bg-white p-6 rounded-2xl shadow">
                 <h2 class="text-lg font-semibold mb-3">Skills</h2>
                 <div class="flex flex-wrap gap-2">
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">HTML5</span>
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">CSS3</span>
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Responsive Design</span>
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">Git/GitHub
+                    <span class=" bg-[#042040] text-white px-3 py-1 rounded-full text-sm"> <i
+                            class="fa-brands fa-html5"></i>HTML5</span>
+                    <span class="bg-[#042040] text-white px-3 py-1 rounded-full text-sm"> <i
+                            class="fa-brands fa-css3"></i>CSS3</span>
+                    <span class="bg-[#042040] text-white px-3 py-1 rounded-full text-sm"><i
+                            class="fa-brands fa-js"></i>JavaScript</span>
+                    <span class="bg-[#042040] text-white px-3 py-1 rounded-full text-sm"><i
+                            class="fa-brands fa-tailwind-css"></i>Tailwind CSS</span>
+                    <span class="bg-[#042040] text-white px-3 py-1 rounded-full text-sm">Responsive Design</span>
+                    <span class="bg-[#042040] text-white px-3 py-1 rounded-full text-sm"><i
+                            class="fa-brands fa-github"></i>Git/GitHub
 
                     </span>
                 </div>
@@ -127,8 +157,24 @@
 
 
         </div>
+        <!-- Get in Touch -->
+        <div
+            class="bg-[#042040] text-white p-6 sm:p-8 rounded-2xl shadow mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <h2 class="text-xl font-semibold">Get in Touch</h2>
+                <p class="text-sm text-blue-100">Have a project or opportunity? Let’s connect.</p>
+            </div>
+            <a href="mailto:your@email.com"
+                class="bg-black text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-100 hover:text-black transition">
+                Email Me
+            </a>
+        </div>
 
     </div>
+
+    </div>
+
+
 
 
 

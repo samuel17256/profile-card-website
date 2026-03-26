@@ -10,6 +10,83 @@
             scroll-behavior: smooth;
         }
         
+        /* Theme variables */
+        :root {
+            --bg-primary: #111827;
+            --bg-secondary: #1f2937;
+            --bg-tertiary: #374151;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --text-tertiary: #9ca3af;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --border-color: #4b5563;
+        }
+        
+        [data-theme="light"] {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7f5ec;
+            --bg-tertiary: #e5e7eb;
+            --text-primary: #111827;
+            --text-secondary: #374151;
+            --text-tertiary: #6b7280;
+            --accent-blue: #2563eb;
+            --accent-green: #059669;
+            --accent-purple: #7c3aed;
+            --border-color: #d1d5db;
+        }
+        
+        /* Base theme styles */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .bg-gray-900 { background-color: var(--bg-secondary); }
+        .bg-gray-800 { background-color: var(--bg-tertiary); }
+        .bg-gray-700 { background-color: var(--border-color); }
+        .text-white { color: var(--text-primary); }
+        .text-gray-300 { color: var(--text-secondary); }
+        .text-gray-400 { color: var(--text-tertiary); }
+        .border-gray-700 { border-color: var(--border-color); }
+        .border-blue-400 { border-color: var(--accent-blue); }
+        .text-blue-400 { color: var(--accent-blue); }
+        .text-green-400 { color: var(--accent-green); }
+        .text-purple-400 { color: var(--accent-purple); }
+        .from-blue-400 { --tw-gradient-from: var(--accent-blue); }
+        .to-blue-600 { --tw-gradient-to: var(--accent-blue); }
+        .from-green-400 { --tw-gradient-from: var(--accent-green); }
+        .to-green-600 { --tw-gradient-to: var(--accent-green); }
+        .from-purple-400 { --tw-gradient-from: var(--accent-purple); }
+        .to-purple-600 { --tw-gradient-to: var(--accent-purple); }
+        
+        /* Theme toggle button */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--bg-tertiary);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .theme-toggle-icon {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease;
+        }
+        
         /* Scroll reveal animations */
         .reveal {
             opacity: 0;
@@ -64,7 +141,14 @@
         .stagger-6 { transition-delay: 0.6s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
+<body class="min-h-screen">
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="theme-toggle-icon" id="theme-icon" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+    </button>
+
     <!-- Sticky Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-gray-800/95 backdrop-blur-sm border-b border-gray-700 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -614,6 +698,35 @@
     </footer>
 
     <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+        
+        // Theme toggle event listener
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+        
+        // Update theme icon based on current theme
+        function updateThemeIcon(theme) {
+            if (theme === 'light') {
+                themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            } else {
+                themeIcon.innerHTML = '<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>';
+            }
+        }
+
         // Scroll reveal animation
         function reveal() {
             const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');

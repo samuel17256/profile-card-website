@@ -19,37 +19,39 @@
 <body class="min-h-screen bg-gray-100 pt-14">
 
     <!-- Navbar -->
-    <nav class="w-full fixed top-0 left-0 z-50 px-6 py-4 flex items-center justify-between"
+    <nav class="w-full fixed top-0 left-0 z-50 px-4 py-4 flex items-center justify-between sm:px-6"
         style="background-color: #042040;">
         <a href="index.html"
             class="text-white text-xs font-semibold no-underline uppercase transition-all duration-300 flex items-center gap-2">
-            <i class="fa fa-arrow-left"></i> Back to Team
+            <i class="fa fa-arrow-left"></i>
+            <span class="hidden sm:inline">Back to Team</span>
+            <span class="sm:hidden">Back</span>
         </a>
         <span class="text-white text-xs font-semibold uppercase">Team 5</span>
     </nav>
 
     <!-- Hero -->
-    <div class="relative bg-cover bg-center bg-no-repeat py-16 text-center"
+    <div class="relative bg-cover bg-center bg-no-repeat py-12 sm:py-16 text-center"
         style="background-image: url('https://imgs.search.brave.com/Z7f0stVwvBxx3gABSetYDd-sMGNamD5Eu9fON8l8Bbk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTc3/ODE3NjMzMy9waG90/by9kaWdpdGFsLWV5/ZS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9YkpEdGktYnlP/ODcxYTkybjRvSnlW/bnUtXzhNSzFaUDlX/dUZKc05vRU1Zcz0');">
         <div class="absolute inset-0 bg-black/60"></div>
-        <div class="relative z-10">
-            <div class="inline-block w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4">
+        <div class="relative z-10 px-4">
+            <div class="inline-block w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-blue-500 mb-4">
                 <img class="w-full h-full object-cover"
                     src="https://imgs.search.brave.com/LfBvt1_IIr4jZfeZS1WAg1pA3QeSQVOzP9ieBu3csg4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTcv/NTU4LzM0OC9zbWFs/bC93b25kZXJmdWwt/bWluaW1hbGlzdC1k/LW1ldGF2ZXJzZS1h/dmF0YXItZnJvbnQt/dmlldy1pc29sYXRl/ZC1oaWdoLXF1YWxp/dHktZnJlZS1wbmcu/cG5n"
                     alt="Dev Timothy" />
             </div>
-            <h1 class="text-3xl font-semibold text-white capitalize mb-2">Dev Timothy</h1>
-            <h2 class="text-[15px] text-blue-400 capitalize">Backend Developer</h2>
+            <h1 class="text-2xl sm:text-3xl font-semibold text-white capitalize mb-2">Dev Timothy</h1>
+            <h2 class="text-sm sm:text-[15px] text-blue-400 capitalize">Backend Developer</h2>
         </div>
     </div>
 
     <!-- Profile Body -->
-    <div class="w-full max-w-4xl mx-auto px-4 py-8">
+    <div class="w-full max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
 
         <!-- About -->
-        <div class="bg-[#f7f5ec] mb-6 px-8 py-6">
-            <h3 class="text-lg font-bold uppercase mb-3" style="color: #042040;">About</h3>
-            <p class="text-[15px] text-gray-500 leading-relaxed">
+        <div class="bg-[#f7f5ec] mb-4 sm:mb-6 px-4 sm:px-8 py-5 sm:py-6">
+            <h3 class="text-base sm:text-lg font-bold uppercase mb-3" style="color: #042040;">About</h3>
+            <p class="text-sm sm:text-[15px] text-gray-500 leading-relaxed">
                 Timothy is a passionate Backend Engineer with a strong focus on building robust, scalable, and efficient
                 server-side systems. With hands-on experience in Python and FastAPI, he designs and develops
                 high-performance APIs and microservices that power modern web applications. He leverages Docker for
@@ -60,57 +62,47 @@
         </div>
 
         <!-- Skills -->
-        <div class="bg-[#f7f5ec] mb-6 px-8 py-6">
-            <h3 class="text-lg font-bold uppercase mb-3" style="color: #042040;">Skills & Technologies</h3>
+        <div class="bg-[#f7f5ec] mb-4 sm:mb-6 px-4 sm:px-8 py-5 sm:py-6">
+            <h3 class="text-base sm:text-lg font-bold uppercase mb-3" style="color: #042040;">Skills & Technologies</h3>
             <div class="flex flex-wrap gap-2">
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Python</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">FastAPI</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Docker</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">MySQL</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Tailwind CSS</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">JavaScript</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">REST APIs</span>
-                <span class="text-white text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Microservices</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Python</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">FastAPI</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Docker</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">MySQL</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Tailwind CSS</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">JavaScript</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">REST APIs</span>
+                <span class="text-white text-xs sm:text-[15px] px-3 py-1 capitalize" style="background-color: #042040;">Microservices</span>
             </div>
         </div>
 
         <!-- Interests -->
-        <div class="bg-[#f7f5ec] mb-6 px-8 py-6">
-            <h3 class="text-lg font-bold uppercase mb-3" style="color: #042040;">Interests & Goals</h3>
+        <div class="bg-[#f7f5ec] mb-4 sm:mb-6 px-4 sm:px-8 py-5 sm:py-6">
+            <h3 class="text-base sm:text-lg font-bold uppercase mb-3" style="color: #042040;">Interests & Goals</h3>
             <div class="flex flex-wrap gap-2">
-                <span class="text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Blockchain Technology</span>
-                <span class="text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Artificial Intelligence</span>
-                <span class="text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Full Stack Development</span>
-                <span class="text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Web3</span>
+                <span class="text-xs sm:text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Blockchain Technology</span>
+                <span class="text-xs sm:text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Artificial Intelligence</span>
+                <span class="text-xs sm:text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Full Stack Development</span>
+                <span class="text-xs sm:text-[15px] text-gray-800 border border-gray-800 px-3 py-1 capitalize">Web3</span>
             </div>
         </div>
 
         <!-- Social -->
-        <div class="bg-[#f7f5ec] mb-6 px-8 py-6">
-            <h3 class="text-lg font-bold uppercase mb-3" style="color: #042040;">Connect</h3>
-            <ul class="flex gap-2 list-none">
-                <!-- <li>
-                    <a href="#"
-                        class="fa fa-facebook block px-3 py-2.5 text-[17px] text-white no-underline transition-all duration-300"
-                        style="background-color: #042040;"></a>
-                </li> -->
+        <div class="bg-[#f7f5ec] mb-4 sm:mb-6 px-4 sm:px-8 py-5 sm:py-6">
+            <h3 class="text-base sm:text-lg font-bold uppercase mb-3" style="color: #042040;">Connect</h3>
+            <ul class="flex flex-wrap gap-2 list-none">
                 <li>
                     <a href="https://x.com/OgoryTimothy" target="_blank"
                         class="fa fa-twitter block px-3 py-2.5 text-[17px] text-white no-underline transition-all duration-300"
                         style="background-color: #042040;"></a>
                 </li>
-                <!-- <li>
-                    <a href="#"
-                        class="fa fa-google-plus block px-3 py-2.5 text-[17px] text-white no-underline transition-all duration-300"
-                        style="background-color: #042040;"></a>
-                </li> -->
                 <li>
                     <a href="#"
                         class="fa fa-linkedin block px-3 py-2.5 text-[17px] text-white no-underline transition-all duration-300"
                         style="background-color: #042040;"></a>
                 </li>
                 <li>
-                    <a href="https://github.com/timo10thy"
+                    <a href="https://github.com/timo10thy" target="_blank"
                         class="fa fa-github block px-3 py-2.5 text-[17px] text-white no-underline transition-all duration-300"
                         style="background-color: #042040;"></a>
                 </li>
